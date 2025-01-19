@@ -10,6 +10,7 @@ public partial class MainWindow : Window
 {
     private List<int> bingoNumbers;
     private Random random;
+    // the number of pictures - same as the number of pictures in resources/Image
     private const int NUMBER = 35;
     
     public MainWindow()
