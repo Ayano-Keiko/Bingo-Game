@@ -10,13 +10,14 @@ public partial class MainWindow : Window
 {
     private List<int> bingoNumbers;
     private Random random;
+    private const int NUMBER = 35;
     
     public MainWindow()
     {
         InitializeComponent();
         
         // fill 0 - 34 to list - bingo item lists
-        IEnumerable<int> range = Enumerable.Range(0, 35);
+        IEnumerable<int> range = Enumerable.Range(0, NUMBER);
         bingoNumbers = range.ToList();
         
         // Init random class
