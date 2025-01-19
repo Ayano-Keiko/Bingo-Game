@@ -1,7 +1,7 @@
 # Bingo-Game
 Bingo Program implementation via C#<br/>
 带有中国元素的***Bingo***游戏<br/>
-Only Windows OS<br/>
+*Only Windows OS*<br/>
 ![Showcase](./ScreenShot/Showing.png)
 
 
