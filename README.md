@@ -8,6 +8,7 @@ Bingo Program implementation via C#<br/>
 ## Prerequisite
 > .Net SDK (I use .Net 8.0.112)<br>
 > WPF Framework<br>
+> Window Platform<br>
 
 ## Features
 1. Use pseudo-random numbers to simulate drawing lots(抓阄).<br />
