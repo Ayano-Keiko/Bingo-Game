@@ -1,0 +1,44 @@
+﻿<Window x:Class="BingoGame.BingoDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:BingoGame"
+        mc:Ignorable="d"
+        Title="~Bingo~"
+        Height="600" Width="800"
+        ShowInTaskbar="False"
+        Icon="./resources/Image/bingo-icon.jpg"
+        MinHeight="200"
+        MinWidth="300"
+        WindowStartupLocation="Manual"
+        Left="900"
+        Top="40"
+        >
+    <Grid>
+        <!-- Display Image -->
+        
+        <Image
+            Width="400"
+            Height="400"
+            Name="BingoImage"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="0 20"/>
+        
+        <!-- Ok Button -->
+        <StackPanel
+            VerticalAlignment="Bottom">
+            <Button
+                Width="40"
+                Height="20"
+                IsDefault="True"
+                Click="ButtonBase_OnClick"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Margin="20">Ok</Button>
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>

@@ -1,0 +1,395 @@
+﻿<Window x:Class="BingoGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BingoGame"
+        mc:Ignorable="d"
+        Title="Bingo Game"
+        Icon="./resources/Image/icon.jpg"
+        Height="960" Width="1080"
+        Padding="100 60">
+    <Grid>
+        <MediaElement
+                Source="./resources/Media/jskw.mp3"
+                Name="BG_Music"></MediaElement>
+        <!-- 5 * 7 -->
+        <!-- Row 1 -->
+        <Canvas Width="100"
+                    Height="100"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="20 40"
+                    Name="Pic0">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/0.png" />
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="140 40"
+                Name="Pic1">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/1.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="260 40"
+                Name="Pic2">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/2.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="380 40"
+                Name="Pic3">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/3.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="500 40"
+                Name="Pic4">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/4.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="620 40"
+                Name="Pic5">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/5.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="740 40"
+                Name="Pic6">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/6.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        
+        <!-- Row 2 -->
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="20 180"
+                Name="Pic7">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/7.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="140 180"
+                Name="Pic8">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/8.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="260 180"
+                Name="Pic9">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/9.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="380 180"
+                Name="Pic10">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/10.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="500 180"
+                Name="Pic11">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/11.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="620 180"
+                Name="Pic12">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/12.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="740 180"
+                Name="Pic13">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/13.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        
+        <!-- Row 3 -->
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="20 320"
+                Name="Pic14">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/14.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="140 320"
+                Name="Pic15">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/15.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="260 320"
+                Name="Pic16">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/16.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="380 320"
+                Name="Pic17">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/17.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="500 320"
+                Name="Pic18">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/18.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="620 320"
+                Name="Pic19">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/19.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="740 320"
+                Name="Pic20">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/20.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        
+        <!-- Row 4 -->
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="20 460"
+                Name="Pic21">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/21.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="140 460"
+                Name="Pic22">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/22.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="260 460"
+                Name="Pic23">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/23.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="380 460"
+                Name="Pic24">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/24.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="500 460"
+                Name="Pic25">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/25.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="620 460"
+                Name="Pic26">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/26.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="740 460"
+                Name="Pic27">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/27.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        
+        <!-- Row 5 -->
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="20 600"
+                Name="Pic28">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/28.png"></ImageBrush>
+                </Canvas.Background>
+        
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="140 600"
+                Name="Pic29">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/29.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="260 600"
+                Name="Pic30">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/30.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="380 600"
+                Name="Pic31">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/31.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="500 600"
+                Name="Pic32">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/32.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="620 600"
+                Name="Pic33">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/33.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        <Canvas Width="100"
+                Height="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="740 600"
+                Name="Pic34">
+                <Canvas.Background>
+                        <ImageBrush ImageSource="resources/Image/Bingo/34.png"></ImageBrush>
+                </Canvas.Background>
+        </Canvas>
+        
+        <!-- Click Button -->
+        <Button Width="160"
+                Height="60"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Content="Bingo"
+                FontSize="24"
+                FontWeight="Bold"
+                Click="bingo_turn"
+                Margin="360 20">
+                <Button.Resources>
+                        <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="15"/>
+                        </Style>
+                </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
