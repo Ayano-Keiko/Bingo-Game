@@ -36,5 +36,5 @@ Or you can run the executable directly
 Download the release file and click BingoGame.exe executable to run it
 
 ## Contributor
-- 民乐合奏《金蛇狂舞》晚会喜庆背景 中国广播民族乐团 (./resources/Media/jskw.mp3)<br/>[民乐合奏《金蛇狂舞》](https://www.bilibili.com/video/BV1qkDAYzELJ/)
+- 民乐合奏《金蛇狂舞》央视春晚曲目 中国广播民族乐团 (./resources/Media/jskw.mp3)<br/>[民乐合奏《金蛇狂舞》](https://www.bilibili.com/video/BV1qkDAYzELJ/)
 - Bingo Music ( ./resources/Media/bingo.mp3 )<br>License: Creative Commons Zero<br>[对勾，答对——综艺 许可:CC0 作者:自树 来源:耳聆网 https://www.ear0.com/sound/36966](https://www.ear0.com/sound/show/soundid-36966)
