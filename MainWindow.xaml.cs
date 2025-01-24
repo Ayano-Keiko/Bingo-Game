@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using System.IO;
+using System.Windows;
+using System.Text.RegularExpressions;
 using System.Windows.Controls;
 
 namespace BingoGame;
@@ -8,18 +10,16 @@ namespace BingoGame;
 /// </summary>
 public partial class MainWindow : Window
 {
-    private List<int> bingoNumbers;
-    private Random random;
-    // the number of pictures - same as the number of pictures in resources/Image
-    private const int NUMBER = 35;
+    private List<String> fileList;  // To store all file names
+    private Random random;  // to generate random number
     
     public MainWindow()
     {
         InitializeComponent();
         
-        // fill 0 - 34 to list - bingo item lists
-        IEnumerable<int> range = Enumerable.Range(0, NUMBER);
-        bingoNumbers = range.ToList();
+        // fill 0 - 34 to list - bingo item lists -- get all image files name from resources/Image/Bingo
+        String[] files = Directory.GetFiles("resources/Image/Bingo");
+        fileList = files.ToList();
         
         // Init random class
         random = new Random();
@@ -28,7 +28,7 @@ public partial class MainWindow : Window
     private void bingo_turn(object sender, RoutedEventArgs e)
     {
         
-        if (bingoNumbers.Count < 2)
+        if (fileList.Count < 2)
         {
             // less than 2, quit
             // avoid out of range
@@ -37,9 +37,9 @@ public partial class MainWindow : Window
         }
         
         // 1. generate random number - index
-        int currentIndex = random.Next(0, bingoNumbers.Count);
+        int currentIndex = random.Next(0, fileList.Count);
         // 2. get the actual value
-        int currentValue = bingoNumbers[currentIndex];
+        String currentValue = fileList[currentIndex];
         
         // 3. display current Bingo item
         /* display the image displaying current item
@@ -53,7 +53,15 @@ public partial class MainWindow : Window
         /* add stroke/ mask on image
          * set the opacity to semi-transparent to identify be used
          */
-        String canvasName = $"Pic{currentValue}";
+        
+        // use regular expression to match patern
+        String pattern = @"(\d+)";
+        MatchCollection matches;
+        Regex selectNumber = new Regex(pattern, RegexOptions.None);
+        matches = selectNumber.Matches(currentValue);
+        String canvasName = $"Pic{matches[0]}";
+        
+        // Set current canvas to semi-transparent
         Canvas canvas = (Canvas) this.FindName(canvasName);
 
         if (canvas != null)
@@ -63,13 +71,13 @@ public partial class MainWindow : Window
         }
         
         // 4. delete the number in Array
-        bingoNumbers.RemoveAt(currentIndex);
+        fileList.RemoveAt(currentIndex);
         
         // display item index and remain size for debug - Debug only
         // MessageBox.Show($"Now we are at {currentValue}\nand index is {currentIndex}\nand we have {bingoNumbers.Count} left");
         
     }
-
+    
     ~MainWindow()
     {
     }

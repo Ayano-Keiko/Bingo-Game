@@ -8,7 +8,7 @@ namespace BingoGame;
 public partial class BingoDialog : Window
 {
     private Image? bingoImage;
-    public BingoDialog(int imgIndex)
+    public BingoDialog(String imgName)
     {
         InitializeComponent();
 
@@ -17,10 +17,9 @@ public partial class BingoDialog : Window
         if (bingoImage != null)
         {
             // Set the Image Control
-            String fileName = $"resources/Image/Bingo/{imgIndex}.png";
             BitmapImage bitmapImage = new BitmapImage();
             bitmapImage.BeginInit();
-            bitmapImage.UriSource = new Uri(fileName, UriKind.Relative);
+            bitmapImage.UriSource = new Uri(imgName, UriKind.Relative);
             bitmapImage.EndInit();
             bingoImage.Stretch = Stretch.Fill;
             bingoImage.Source = bitmapImage;
