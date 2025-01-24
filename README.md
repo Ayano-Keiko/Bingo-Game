@@ -12,7 +12,7 @@ Using WPF Framework<br/>
 > Window Platform<br>
 
 ## Features
-1. Use pseudo-random numbers to simulate drawing lots(抓阄).<br />
+1. Use pseudo-random numbers to simulate Lottery(抽签).<br />
 2. Very user-friendly UI<br />
 3. Delete the number/item in array and Mask the image<br />
 4. Show dialog - The current bingo item<br />
