@@ -9,8 +9,12 @@
         Icon="./resources/Image/icon.jpg"
         Height="960" Width="1080"
         Padding="100 60">
-    <Grid>
-        <MediaElement
+        <Window.Background>
+                <ImageBrush ImageSource="./resources/Image/backgorund.jpg"></ImageBrush>
+        </Window.Background>
+        <Grid>
+            
+            <MediaElement
                 Source="./resources/Media/jskw.mp3"
                 Name="BG_Music"></MediaElement>
         <!-- 5 * 7 -->

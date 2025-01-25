@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Text.RegularExpressions;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace BingoGame;
 
@@ -67,7 +68,7 @@ public partial class MainWindow : Window
         if (canvas != null)
         {
             // set the opacity mask to identify the selected item
-            canvas.Opacity = 0.2;
+            canvas.Opacity = 0.6;
         }
         
         // 4. delete the number in Array
@@ -77,7 +78,19 @@ public partial class MainWindow : Window
         // MessageBox.Show($"Now we are at {currentValue}\nand index is {currentIndex}\nand we have {bingoNumbers.Count} left");
         
     }
-    
+
+    protected override void OnKeyDown(KeyEventArgs e)
+    {
+        if (e.Key == Key.Enter)
+        {
+            bingo_turn(null, null);
+        }
+        else if (e.Key == Key.Escape)
+        {
+             this.Close();
+        }
+    }
+
     ~MainWindow()
     {
     }
