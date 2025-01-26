@@ -9,10 +9,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="resources\Image\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Remove="resources\Image\Bingo\0.png" />
       <Resource Include="resources\Image\Bingo\0.png">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -163,6 +159,10 @@
       </Resource>
       <None Remove="resources\Media\jskw.mp3" />
       <Resource Include="resources\Media\jskw.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="resources\Image\backgorund.jpg" />
+      <Resource Include="resources\Image\backgorund.jpg">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Resource>
     </ItemGroup>
