@@ -41,6 +41,7 @@ If you want to customize your own Bingo, follow these steps:<br>
 2. Modify the `canvas` in `MainWindow.xaml` to adapt to the images in the `Bingo` folder.<br>
 3. Modify the `title` and `icon` in the `MainWindow.xaml` and `BingoDialog.xaml` files to change the window title and icon. This step is optional.<br>
 4. Re-Compile the project and build the executable<br>
+5. Put respurce folder to the same directory as executable ( Music resource needs to be manually added )<br>
 
 ## Contributor
 - 民乐合奏《金蛇狂舞》央视春晚曲目 中国广播民族乐团 (./resources/Media/jskw.mp3)<br/>[民乐合奏《金蛇狂舞》](https://www.bilibili.com/video/BV1qkDAYzELJ/)
