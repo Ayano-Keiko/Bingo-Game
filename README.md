@@ -22,20 +22,9 @@ Using WPF Framework<br/>
 Please see the recent release
 
 ## Get Start
-Enter project directory<br>
-```shell
-cd ./BingoGame
-```
-run the project<br>
-```shell
-dotnet build  # build the executable
-dotnet run  # run the file - you can skip the first line
-```
-Or you can run the executable directly
-
-## Using
 Download the release file and click BingoGame.exe executable to run it<br>
-<hr>
+
+
 If you want to customize your own Bingo, follow these steps:<br>
 1. Replace the images in the `resources/Image/Bingo` folder with new ones.<br>
 2. Modify the `canvas` in `MainWindow.xaml` to adapt to the images in the `Bingo` folder.<br>
