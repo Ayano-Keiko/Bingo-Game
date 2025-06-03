@@ -1,7 +1,6 @@
 # Bingo-Game
 Bingo Program implementation written in C#<br/>
 Using WPF Framework<br/>
-带有中国元素的***Bingo***游戏<br/>
 *Only Windows OS*<br/>
 ![Showcase](./ScreenShot/Showing.png)
 
