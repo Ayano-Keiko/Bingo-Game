@@ -1,7 +1,7 @@
 # Bingo-Game
 Bingo Program implementation written in C# WPF Framework<br/>
 ***Only Windows OS***<br/>
-![Showcase](./demo/Showing.png)
+![Showcase](./demo/DEMO.png)
 
 
 ## Download
