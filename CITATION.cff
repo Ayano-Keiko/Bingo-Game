@@ -1,0 +1,22 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: BINGO GAME
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Sicheng
+    family-names: Zhong
+    email: sicheng.zhong@und.edu
+repository-code: 'https://github.com/Ayano-Keiko/Bingo-Game'
+abstract: A GUI Bingo Game written by C# (WPF)
+keywords:
+  - party
+  - entertainment
+license: GPL-3.0
+commit: 9cf3d90
+version: '2'
+date-released: '2025-01-26'
