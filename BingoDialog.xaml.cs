@@ -7,22 +7,24 @@ namespace BingoGame;
 
 public partial class BingoDialog : Window
 {
-    private Image? bingoImage;
+    private System.Windows.Controls.Canvas? bingoImage;
     public BingoDialog(String imgName)
     {
         InitializeComponent();
 
-        bingoImage = (Image) FindName("BingoImage");
+        // set ICON
+        System.Windows.Media.Imaging.BitmapImage iconImg = new System.Windows.Media.Imaging.BitmapImage(new System.Uri("resources/Image/icon.ico", System.UriKind.Relative));
+        this.Icon = iconImg;
 
+        bingoImage = (System.Windows.Controls.Canvas) FindName("BingoImage");
+        
         if (bingoImage != null)
         {
             // Set the Image Control
-            BitmapImage bitmapImage = new BitmapImage();
-            bitmapImage.BeginInit();
-            bitmapImage.UriSource = new Uri(imgName, UriKind.Relative);
-            bitmapImage.EndInit();
-            bingoImage.Stretch = Stretch.Fill;
-            bingoImage.Source = bitmapImage;
+            BitmapImage bitmapImage = new BitmapImage(new Uri(imgName, UriKind.RelativeOrAbsolute));
+           
+            // bingoImage.Stretch = Stretch.Fill;
+            bingoImage.Background = new System.Windows.Media.ImageBrush( bitmapImage );
         }
     }
 

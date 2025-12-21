@@ -1,7 +1,8 @@
 ﻿using System.IO;
-using System.Windows;
 using System.Text.RegularExpressions;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Input;
 
 namespace BingoGame;
@@ -12,14 +13,73 @@ namespace BingoGame;
 public partial class MainWindow : Window
 {
     private List<String> fileList;  // To store all file names
+    private String[] files;
     private Random random;  // to generate random number
-    
+    private System.Windows.Controls.Grid iconArea;  // the container for M * N grid area
+
     public MainWindow()
     {
         InitializeComponent();
-        
+
+        // set ICON
+        System.Windows.Media.Imaging.BitmapImage iconImg = new System.Windows.Media.Imaging.BitmapImage(new System.Uri("resources/Image/icon.ico", System.UriKind.Relative));
+        this.Icon = iconImg;
+
+        // associated with xaml
+        iconArea = (System.Windows.Controls.Grid) this.FindName("IconArea");
+        // System.Diagnostics.Trace.WriteLine($"width: {iconArea.Width} height: {iconArea.Height}");
+
         // fill 0 - 34 to list - bingo item lists -- get all image files name from resources/Image/Bingo
-        String[] files = Directory.GetFiles("resources/Image/Bingo");
+        files = Directory.GetFiles("resources/Image/Bingo");
+        // get the grid size (row, col)
+        (int row, int col) gridSize = GetDivisor.getDivisor(files.Length);
+        // System.Diagnostics.Trace.WriteLine($"size: [ {gridSize.row}, {gridSize.col} ]");
+        System.Windows.Thickness thickness = new System.Windows.Thickness(20);
+
+        for (int r = 0; r < gridSize.row; r++)
+        {
+            System.Windows.Controls.RowDefinition rowDef = new System.Windows.Controls.RowDefinition();
+            iconArea.RowDefinitions.Add(rowDef);
+        }
+
+        for (int c = 0; c < gridSize.col; c++)
+        {
+            System.Windows.Controls.ColumnDefinition colDef = new System.Windows.Controls.ColumnDefinition();
+            iconArea.ColumnDefinitions.Add(colDef);
+        }
+
+        for (int r = 0; r < gridSize.row; r ++)
+        {
+            for (int c = 0; c < gridSize.col; c ++)
+            {
+                int indice = r * gridSize.col + c;
+                
+                // mtach the number in file name
+                String pattern = @"(\d+)";
+                MatchCollection matches;
+                Regex selectNumber = new Regex(pattern, RegexOptions.None);
+                matches = selectNumber.Matches(files[indice]);
+
+                // load image
+                System.Uri imgPath = new System.Uri(files[indice], System.UriKind.RelativeOrAbsolute);
+                System.Windows.Media.Imaging.BitmapImage img = new System.Windows.Media.Imaging.BitmapImage(imgPath);
+
+                System.Windows.Controls.Canvas canvas = new System.Windows.Controls.Canvas();
+                canvas.Width = iconArea.Width / gridSize.col;
+                canvas.Height = iconArea.Height / gridSize.row;
+                canvas.Margin = thickness;
+                canvas.Name = $"Pic{matches[0]}";
+                this.RegisterName($"Pic{matches[0]}", canvas);  // register the name in XAML
+                canvas.Background = new System.Windows.Media.ImageBrush(img);
+                canvas.Opacity = 1.0;
+
+                Grid.SetRow(canvas, r);
+                Grid.SetColumn(canvas, c);
+                iconArea.Children.Add(canvas);
+
+            }
+        }
+
         fileList = files.ToList();
         
         // Init random class
@@ -48,7 +108,6 @@ public partial class MainWindow : Window
 
         BingoDialog bingoDialog = new BingoDialog(currentValue);
         
-        System.Media.SystemSounds.Hand.Play();
         bingoDialog.ShowDialog();
         
         /* add stroke/ mask on image
@@ -68,9 +127,10 @@ public partial class MainWindow : Window
         if (canvas != null)
         {
             // set the opacity mask to identify the selected item
-            canvas.Opacity = 0.6;
+            
+            canvas.Opacity = 0.4;
         }
-        
+
         // 4. delete the number in Array
         fileList.RemoveAt(currentIndex);
         
@@ -93,5 +153,6 @@ public partial class MainWindow : Window
 
     ~MainWindow()
     {
+
     }
 }

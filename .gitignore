@@ -1,0 +1,15 @@
+# IDEA file
+.idea/
+.vs/
+./BingoGame.sln
+
+# executable
+bin/
+obj/
+Licenses/
+BingoGame.csproj
+
+# Resource
+resources/
+ScreenShot/
+demo/
